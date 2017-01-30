@@ -1,3 +1,6 @@
+## Show alias definition
+if you write the command `alias` it will print all the aliases definitions on your __.bashrc__ or __.zshrc__ file
+
 ## IPython use previous command
 
 By using the `_` you can use the previous command!
