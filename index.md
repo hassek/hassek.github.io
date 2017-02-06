@@ -1,3 +1,6 @@
+## Delete *up to* a character in vim
+By using `dt<char>` you can delete up to a character in vim
+
 ## Show alias definition
 if you write the command `alias` it will print all the aliases definitions on your __.bashrc__ or __.zshrc__ file
 
