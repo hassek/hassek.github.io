@@ -6,6 +6,7 @@ So
 I am here to Stay!
 ```
 by using `dtS` since the start of the line will end up in 
+
 ```vim
 Stay!
 ```
