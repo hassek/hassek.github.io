@@ -2,12 +2,12 @@
 By using `dt<char>` you can delete up to a character in vim.
 So 
 
-```vim
+```
 I am here to Stay!
 ```
 by using `dtS` since the start of the line will end up in 
 
-```vim
+```
 Stay!
 ```
 
