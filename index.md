@@ -1,11 +1,19 @@
+## Biggest disk space offenders
+When you want to cleanup your server you usually want to find the
+biggest offenders in your system, the command line tool `ncdu` is just
+the tool for that on Linux!
+
+For mac the `storage management` tool is amazing also.
+
+
 ## Delete *up to* a character in vim
 By using `dt<char>` you can delete up to a character in vim.
-So 
+So
 
 ```
 I am here to Stay!
 ```
-by using `dtS` since the start of the line will end up in 
+by using `dtS` since the start of the line will end up in
 
 ```
 Stay!
