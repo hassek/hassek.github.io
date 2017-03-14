@@ -1,3 +1,36 @@
+## Vim un-match
+
+Sometimes I want to delete lines that doesn't match a particular
+pattern, for those you can do a regex
+
+```
+/^\(.*WORD\)\@!.*$
+```
+
+Breaking it down
+
+`^` means start of the line
+`\(.*WORD\)` it's the _atom_ word been searched
+`\@!` it's the important command that **negates** the atom word (it's not
+exactly a negation, please do a _:help @!_ for more info).
+`.*$` everything else until the end of line.
+
+Now I could do this to delete them:
+
+```
+:%g/^\(.*WORD\)\@!.*$/norm!dd
+```
+
+There are other very interesting use cases for this, for example, you
+could match words that are not followed by something else:
+
+```
+/foo\(bar\)\@!
+```
+
+This will find all cases of _foo_ not followed by _bar_.
+
+
 ## Biggest disk space offenders
 When you want to cleanup your server you usually want to find the
 biggest offenders in your system, the command line tool `ncdu` is just
