@@ -1,3 +1,10 @@
+## Git diff current branch file against another branch on vim fugitive
+
+```
+:Gdiff <branch>:%
+```
+`%` expands to the file name on vim.
+
 ## Python list flattening
 
 To flatten a list in a simple way we can use the `operator.concat` and a reduce function.
