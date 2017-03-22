@@ -10,12 +10,19 @@ aws s3 ls | cut -d " " -f 3 | xargs -I{} aws s3 rm s3://{} --dryrun --recursive
 Let's break it down:
 
 * `aws s3 ls` will show all the bucket names with their creation time (i.e. "2011-10-18 17:48:34 mah_bucket")
-* `cut -d " " -f 3` we split the result and get the 3rd column, which is the name
-* `xargs -I{} aws s3 rm s3://{} --dryrun --recursive` we delete all the buckets
+* `cut -d " " -f 3` will split the result and get the 3rd column, which is the name
+* `xargs -I{} aws s3 rm s3://{} --dryrun --recursive` deletes all the buckets recursively
 
-In this case, notice I added the flag `--dryrun`, this is so we don't do
-something we don't want to, first test it and then remove the flag when
-you are sure.
+In this case, notice I added the flag `--dryrun` so we can test it
+knowing it will do exactly what we want before executing it.
+
+After deleting all objects in the buckets, let's delete the buckets!
+
+```
+aws s3 ls | cut -d " " -f 3 | xargs aws s3 rb s3://
+```
+
+Boom! Done!
 
 ## Git diff current branch file against another branch on vim fugitive
 
