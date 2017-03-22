@@ -1,3 +1,22 @@
+## delete all s3 branches in aws
+
+With _awscli_ you can access your aws account and manage everything from
+there. I needed to remove all buckets from S3 so I did this:
+
+```
+aws s3 ls | cut -d " " -f 3 | xargs -I{} aws s3 rm s3://{} --dryrun --recursive
+```
+
+Let's break it down:
+
+* `aws s3 ls` will show all the bucket names with their creation time (i.e. "2011-10-18 17:48:34 mah_bucket")
+* `cut -d " " -f 3` we split the result and get the 3rd column, which is the name
+* `xargs -I{} aws s3 rm s3://{} --dryrun --recursive` we delete all the buckets
+
+In this case, notice I added the flag `--dryrun`, this is so we don't do
+something we don't want to, first test it and then remove the flag when
+you are sure.
+
 ## Git diff current branch file against another branch on vim fugitive
 
 ```
