@@ -19,7 +19,7 @@ knowing it will do exactly what we want before executing it.
 After deleting all objects in the buckets, let's delete the buckets!
 
 ```
-aws s3 ls | cut -d " " -f 3 | xargs aws s3 rb s3://
+aws s3 ls | cut -d " " -f 3 | xargs -I{} aws s3 rb s3://{}
 ```
 
 Boom! Done!
