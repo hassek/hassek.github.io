@@ -1,3 +1,14 @@
+## detach all other users in tmux
+
+Sometimes in a server there are many users attached to a tmux session,
+because screens can be smaller on their terminal, this tends to happen:
+
+#image here
+
+You can detach users that are making this happen by issuing the command `<PREFIX> D`. It will show you their screen size and you can detach them.
+
+Or you could be a full fledged dick and just kick everyone out when you are attaching to the session with `tmux a -d`.
+
 ## delete all s3 branches in aws
 
 With _awscli_ you can access your aws account and manage everything from
