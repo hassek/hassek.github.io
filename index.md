@@ -9,7 +9,7 @@ You can detach users that are making this happen by issuing the command `<PREFIX
 
 <img width="736" alt="screen size" src="https://cloud.githubusercontent.com/assets/778410/24876081/60bd888c-1df8-11e7-9196-5fffed1d91b5.png">
 
-Or you could be a full fledged ________, you can kick everyone out when you are attaching to the session with `tmux a -d`.
+Or you could be a full fledged ______ and kick everyone out when you are attaching to the session with `tmux a -d`.
 
 ## delete all s3 branches in aws
 
