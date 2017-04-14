@@ -16,7 +16,7 @@ angry.at.life@hotmail.com
 The general format is `:[range]g/<pattern>/<cmd>`. By default the range is
 the whole file.
 
-We can execute this command `:g/^/norm!I"A",` to get what we want; let's break it down:
+We can execute this command `:g/^/norm!I"\?A",` to get what we want; let's break it down:
 
 `:g` This specifies that we want to execute a command.
 
@@ -24,8 +24,8 @@ We can execute this command `:g/^/norm!I"A",` to get what we want; let's break 
 
 `norm!` Means we will execute a _normal!_ Command, which means vim will run things you would do to edit a file and execute them on matched lines.
 
-`I"A",` `I` means go to the beginning of the line in _insert mode_ and
-insert the `"` character, then comes the `<ESC>` that looks like `` to exit _insert
+`I"\?A",` `I` means go to the beginning of the line in _insert mode_ and
+insert the `"` character, then comes the `Ctrl-V` + `<ESC>` that looks like `\?` to exit _insert
 mode_, `A` goes to the end of the line and enters _insert mode_ and
 finally add `",` characters.
 
