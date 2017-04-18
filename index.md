@@ -1,3 +1,17 @@
+## Repeat every _X_ seconds a query on Postgres shell
+
+Sometimes you want to repeat a query constantly to see updated data, here is a way to do it on the postgresql shell
+
+```
+# Execute query
+SELECT count(*) FROM table;
+
+# Tell postgres to repeat it every X seconds
+\watch 5
+```
+
+And that's it!
+
 ## Exit insert mode on a `norm!` command in vim
 
 Sometimes you want to do some format changes in vim, instead of doing
