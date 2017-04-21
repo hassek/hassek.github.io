@@ -5,7 +5,7 @@ or even the whole file. This can be done with fugitive (a vim plugin for git) wh
 
 To do this you need to use the `Glog`, it will search for all changes on the file and set it up in your quickfix list.
 
-#videohere
+![fugitive_glog](https://cloud.githubusercontent.com/assets/778410/25282592/f5681798-267e-11e7-8105-100e1afe84e6.gif)
 
 To move from change to change, the plugin `unimpaired.vim` adds some default keybinds that are very useful
 
