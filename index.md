@@ -1,9 +1,9 @@
 ## Vim fugitive check all changes on a particular file
 
-Sometimes you want to look for a specific change in an area of a file you are working on,
-or even the whole file. This can be done with fugitive (a vim plugin for git) which makes it extremely useful.
+If you want to look for a specific change in an area of a file you are working on or even the whole file,
+ This can be done with fugitive, a vim plugin for git, which makes it extremely useful.
 
-To do this you need to use the `Glog`, it will search for all changes on the file and set it up in your quickfix list.
+To do this you need to use the `Glog` command, it will search for all changes on the file and set it up in your quickfix list.
 
 ![fugitive_glog](https://cloud.githubusercontent.com/assets/778410/25282592/f5681798-267e-11e7-8105-100e1afe84e6.gif)
 
@@ -16,7 +16,7 @@ unimpaired|vim|action
 [Q|:cfirst|Jump to first quickfix item
 ]Q|:clast|Jump to last quickfix item
 
-for more information look [here](http://vimcasts.org/episodes/fugitive-vim-exploring-the-history-of-a-git-repository/)
+For more information look [here](http://vimcasts.org/episodes/fugitive-vim-exploring-the-history-of-a-git-repository/)
 
 ## Signing your data for secure sharing with gpg2
 
