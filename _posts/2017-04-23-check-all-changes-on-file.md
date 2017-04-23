@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Check all changes on a particular file
-date: 2017-04-23 1:15:00
+title: Check all changes on a file
+date: 2017-04-23 13:15:00
 category: git
 tags: [fugitive,unimpaired]
 ---
