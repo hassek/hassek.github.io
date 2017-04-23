@@ -3,9 +3,16 @@ layout: default
 title: Home
 ---
 <div class="header categories">
-{% for cat in site.tags %}
-    <a href="#0">#{{ cat[0] }}</a>
-{% endfor %}
+    <div>
+    {% for cat in site.categories %}
+        <a href="#0">#{{ cat[0] }}</a>
+    {% endfor %}
+    </div>
+    <div>
+    {% for tag in site.tags %}
+        <a href="#0">#{{ tag[0] }}</a>
+    {% endfor %}
+    </div>
 </div>
 <div class="posts">
   {% for post in site.posts %}
