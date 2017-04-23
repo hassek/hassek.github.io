@@ -3,7 +3,6 @@ layout: default
 title: Check all changes on a particular file
 date: 2017-04-23 1:15:00
 category: git
-categories: [git,vim]
 tags: [fugitive,unimpaired]
 ---
 If you want to look for a specific change in an area of a file you are working on or even the whole file,
