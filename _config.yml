@@ -3,7 +3,7 @@
 #
 
 # Name of your site (displayed in the header)
-title: Remember
+title: Tomas Henriquez (Hassek)
 name: Hassek - Tomas Henriquez
 email: nullwriter@gmail.com
 
@@ -20,13 +20,13 @@ footer-links:
   email:
   facebook:
   flickr:
-  github: https://github.com/hassek
+  github: hassek
   instagram:
-  linkedin: https://www.linkedin.com/in/tomashenriquez
+  linkedin: tomashenriquez
   pinterest:
   rss: # just type anything here for a working RSS icon
   twitter:
-  stackoverflow: http://stackoverflow.com/users/836144/hassek
+  stackoverflow: users/836144/hassek
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
 
