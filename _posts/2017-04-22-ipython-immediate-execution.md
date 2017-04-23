@@ -1,7 +1,7 @@
 ---
 layout: default
-title:  "IPython immediate execution"
-date:   2017-04-22 21:50:45
+title: "IPython immediate execution"
+date: 2017-04-22 21:50:45
 category: python
 tags: [ipython]
 ---

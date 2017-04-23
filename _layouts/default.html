@@ -6,18 +6,6 @@
     <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-  <script>
-    // Make this like a filter functionality instead and get it out of here into it's own file!!!
-    $(document).ready(function () {
-      $("div.header.categories a").click(function(e){
-          var tag = $(this).text().substring(1);
-          $(".post").not("." + tag).hide();
-          $(".post." + tag).show();
-      });
-      $(".tag").click(function(e){ var tag = $(this).text().substring(1); $(".post").not("." + tag).hide(); })
-    });
-  </script>
-
     <title>{{ site.title | default: site.github.repository_name }}</title>
   </head>
 
@@ -46,6 +34,10 @@
       </footer>
     </div>
 
-    {% include analytics.html %}
+    <!-- JavaScript -->
+    <script>
+        {% include filtering.js %}
+        {% include analytics.js %}
+    </script>
   </body>
 </html>
