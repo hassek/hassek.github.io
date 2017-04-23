@@ -1,25 +1,10 @@
-## Vim fugitive check all changes on a particular file
-
-If you want to look for a specific change in an area of a file you are working on or even the whole file,
- This can be done with fugitive, a vim plugin for git, which makes it extremely useful.
-
-To do this you need to use the `Glog` command, it will search for all changes on the file and set it up in your quickfix list.
-
-![fugitive_glog](https://cloud.githubusercontent.com/assets/778410/25282592/f5681798-267e-11e7-8105-100e1afe84e6.gif)
-
-To move from change to change, the plugin `unimpaired.vim` adds some default keybinds that are very useful
-
-unimpaired|vim|action
---- | --- | ---
-[q|:cprev|Jump to previous quickfix item
-]q|:cnext|Jump to next quickfix item
-[Q|:cfirst|Jump to first quickfix item
-]Q|:clast|Jump to last quickfix item
-
-For more information look [here](http://vimcasts.org/episodes/fugitive-vim-exploring-the-history-of-a-git-repository/)
-
-## Signing your data for secure sharing with gpg2
-
+---
+layout: default
+title: Signing your data for secure sharing with gpg2
+date: 2017-04-23 1:00:00
+category: shell
+tags: [security,gpg2]
+---
 The first step would be to create your secret/public key, to do this
 just run `gpg2` and start answering all the questions.
 
@@ -171,7 +156,7 @@ uid       [  full  ] CoWorker <xxxxxxx>
 sub   4096R/98289174 2017-04-11 [expires: 2021-04-11]
 ```
 
-Now that we have their public key and we have signed it for trust worthiness we can sign and encrypt our message to them. 
+Now that we have their public key and we have signed it for trust worthiness we can sign and encrypt our message to them.
 Pick user public keys that you want and you are done
 
 ```bash
@@ -184,104 +169,4 @@ user: "Tomas Henriquez <thenriquez@ebates.com>"
 ```
 A file called `<file>.pgp` will be created and you can share it with the specified user as you wish.
 
-If you want to read more, the oficial docs are pretty good! Please check [here](https://www.gnupg.org/gph/en/manual/x334.html) and [here](https://www.gnupg.org/gph/en/manual/x56.html) for more information.
-
-## Repeat every _X_ seconds a query on Postgres shell
-
-Sometimes you want to repeat a query constantly to see updated data, here is a way to do it on the postgresql shell
-
-```
-# Execute query
-SELECT count(*) FROM table;
-
-# Tell postgres to repeat it every X seconds
-\watch 5
-```
-
-And that's it!
-
-## Exit insert mode on a `norm!` command in vim
-
-Sometimes you want to do some format changes in vim, instead of doing
-them in 2 different commands, you can actually exit insert mode to keep
-going by doing `Ctrl-V` and then `<ESC>`.
-
-Let's say I want to get all these emails into a list so I can do a query
-with them
-```
-pewpew.lazor@gmail.com
-null.personality@outlook.com
-your.grandpa@aol.com
-angry.at.life@hotmail.com
-```
-
-The general format is `:[range]g/<pattern>/<cmd>`. By default the range is
-the whole file.
-
-We can execute this command `:g/^/norm!I"\?A",` to get what we want; let's break it down:
-
-`:g` This specifies that we want to execute a command.
-
-`/^/` Match all lines (since all lines do have a beginning of line).
-
-`norm!` Means we will execute a _normal!_ Command, which means vim will run things you would do to edit a file and execute them on matched lines.
-
-`I"\?A",` `I` means go to the beginning of the line in _insert mode_ and
-insert the `"` character, then comes the `Ctrl-V` + `<ESC>` that looks like `\?` to exit _insert
-mode_, `A` goes to the end of the line and enters _insert mode_ and
-finally add `",` characters.
-
-Now the file would be like this:
-
-```
-"pewpew.lazor@gmail.com",
-"null.personality@outlook.com",
-"your.grandpa@aol.com",
-"angry.at.life@hotmail.com",
-```
-
-To finish, just run `J` on all lines and add the brackets at the
-beginning and end of the line and you are ready to do that query!
-
-```
-("pewpew.lazor@gmail.com", "null.personality@outlook.com", "your.grandpa@aol.com", "angry.at.life@hotmail.com",)
-```
-
-## detach all other users in tmux
-
-Sometimes in a server there are many users attached to a tmux session,
-because screens can be smaller on their terminal, this tends to happen:
-
-![image](https://cloud.githubusercontent.com/assets/778410/24876017/12581284-1df8-11e7-9dff-7daa9848f741.png)
-
-You can detach users that are making this happen by issuing the command `<PREFIX> D`. It will show you their screen size and you can detach them.
-
-<img width="736" alt="screen size" src="https://cloud.githubusercontent.com/assets/778410/24876081/60bd888c-1df8-11e7-9196-5fffed1d91b5.png">
-
-Or you could be a full fledged ______ and kick everyone out when you are attaching to the session with `tmux a -d`.
-
-## delete all s3 branches in aws
-
-With _awscli_ you can access your aws account and manage everything from
-there. I needed to remove all buckets from S3 so I did this:
-
-```
-aws s3 ls | cut -d " " -f 3 | xargs -I{} aws s3 rm s3://{} --dryrun --recursive
-```
-
-Let's break it down:
-
-* `aws s3 ls` will show all the bucket names with their creation time (i.e. "2011-10-18 17:48:34 mah_bucket")
-* `cut -d " " -f 3` will split the result and get the 3rd column, which is the name
-* `xargs -I{} aws s3 rm s3://{} --dryrun --recursive` deletes all the buckets recursively
-
-In this case, notice I added the flag `--dryrun` so we can test it
-knowing it will do exactly what we want before executing it.
-
-After deleting all objects in the buckets, let's delete the buckets!
-
-```
-aws s3 ls | cut -d " " -f 3 | xargs -I{} aws s3 rb s3://{}
-```
-
-Boom! Done!
+If you want to read more, the official docs are pretty good! Please check [here](https://www.gnupg.org/gph/en/manual/x334.html) and [here](https://www.gnupg.org/gph/en/manual/x56.html) for more information.
