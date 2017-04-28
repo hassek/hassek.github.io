@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Repeat every _X_ seconds a query in postgresql shell
+title: Repeat every X seconds a query in postgresql shell
 date: 2017-04-23 12:45:00
 category: postgres
 tags: [query]

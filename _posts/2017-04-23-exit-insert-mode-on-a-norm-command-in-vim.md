@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Exit insert mode on a _norm!_ command in vim
+title: Exit insert mode on a `norm!` command in vim
 date: 2017-04-23 12:30:00
 category: vim
 tags: [command]
