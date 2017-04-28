@@ -3,6 +3,44 @@
 
 @import "{{ site.theme }}";
 
+a {
+  text-decoration: none;
+  color: #007edf;
+  text-shadow: none;
+  transition: color 0.5s ease;
+  transition: text-shadow 0.5s ease;
+  -webkit-transition: color 0.5s ease;
+  -webkit-transition: text-shadow 0.5s ease;
+  -moz-transition: color 0.5s ease;
+  -moz-transition: text-shadow 0.5s ease;
+  -o-transition: color 0.5s ease;
+  -o-transition: text-shadow 0.5s ease;
+  -ms-transition: color 0.5s ease;
+  -ms-transition: text-shadow 0.5s ease;
+
+}
+
+a.topic-tag:hover, a.topic-category:hover {
+  text-decoration: none;
+  background-color: #c1c1c1;
+}
+
+a.topic-tag {
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.3em 0.9em;
+  margin: 0 0.5em 0.5em 0;
+  white-space: nowrap;
+  border-radius: 3px;
+  //background-color: #f1f8ff;
+}
+
+
+a.topic-category {
+  @extend .topic-tag;
+  background-color: #e1e1e1;
+}
+
 div.svg-icons {
   display: block;
   position: absolute;
