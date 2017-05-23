@@ -9,7 +9,7 @@ tags: [devops,automation,debug]
 Debugging variables in _Ansible_ can be a pain sometimes, to make it easier there are debug modules to help out with it.
 
 ```
-ansible -m debug -a "msg={{hostvars[inventory_hostname]}}" -i inventories/vagrant/hosts mahmachine.localhost
+ansible -m debug -a "msg=\{{hostvars[inventory_hostname]}\}" -i inventories/vagrant/hosts mahmachine.localhost
 ```
 
 This will print all the variables belonging to the pointed inventory,
