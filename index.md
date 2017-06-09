@@ -21,10 +21,10 @@ title: Home
   {% for post in site.posts %}
     <article id="{{ post.title | slugify }}" class="post {% for tag in  post.tags %}{{ tag }} {% endfor %}{{ post.category }}">
       <div class="title">
-      <h1>
-        <a title='permalink' class="topic-slug" href="#{{ post.title | slugify }}">$</a>
-        {{ post.title }}
-      </h1>
+        <h2>
+          {{ post.title }}
+          <a title='permalink' class="topic-slug" href="#{{ post.title | slugify }}">$</a>
+        </h2>
       </div>
       <div class="entry">
         {{ post.content }}

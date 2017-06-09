@@ -19,7 +19,7 @@ a {
   -ms-transition: text-shadow 0.5s ease;
 }
 
-a.topic-tag:hover, a.topic-category:hover, a.topic-slug:hover {
+a.topic-tag:hover, a.topic-category:hover {
   text-decoration: none;
   background-color: #c1c1c1;
 }
@@ -45,6 +45,14 @@ a.topic-slug {
   padding: 0 4px;
   text-decoration: none;
   border-radius: 3px;
+  visibility: hidden;
+}
+
+div.title:hover {
+  a.topic-slug {
+    visibility: visible;
+    text-decoration: none;
+  }
 }
 
 div.title {
