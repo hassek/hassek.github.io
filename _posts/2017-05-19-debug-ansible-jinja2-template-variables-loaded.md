@@ -10,7 +10,8 @@ Debugging variables in _Ansible_ can be a pain sometimes, to make it easier ther
 
 ```
 {% raw %}
-ansible -m debug -a "msg={{hostvars[inventory_hostname]}}" -i inventories/vagrant/hosts mahmachine.localhost
+ansible -m debug -a "msg={{hostvars[inventory_hostname]}}" -i \
+  inventories/vagrant/hosts mahmachine.localhost
 {% endraw %}
 ```
 
@@ -25,4 +26,4 @@ also, we could add [debug strategy on a playbook](https://docs.ansible.com/ansib
     - base
 ```
 
-And if there is any issue with the playbook it will open a kind of `pdb` or `gdb` so you can interactively investigate!
+And if there is any issue with the playbook it will open a kind of `pdb`/`gdb` so you can interactively investigate!
