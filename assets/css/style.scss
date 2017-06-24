@@ -62,6 +62,14 @@ div.title {
   }
 }
 
+div.header {
+  display: inline-block;
+  p, h1 {
+    display: inline;
+    vertical-align: bottom;
+  }
+}
+
 div.tags {
   margin-top: 20px;
 }
@@ -80,6 +88,9 @@ div.svg-icons {
   border-bottom-right-radius: 2px;
 }
 
+footer p {
+  display: inline;
+}
 
 .svg-icon {
   width: 40px;
