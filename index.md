@@ -23,7 +23,7 @@ title: Home
       <div class="title">
         <h2>
           {{ post.title }}
-          <a title='permalink' class="topic-slug" href="#{{ post.title | slugify }}">$</a>
+          <a title='permalink' class="topic-slug" href="#{{ post.title | slugify }}"><i class="linkify icon"></i></a>
         </h2>
       </div>
       <div class="entry">
