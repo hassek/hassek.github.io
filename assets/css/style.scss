@@ -88,6 +88,12 @@ div.svg-icons {
   border-bottom-right-radius: 2px;
 }
 
+div.vertical * {
+  display: block;
+  padding-bottom: 5px;
+  width: 80px !important;
+}
+
 div.fb-like {
   line-height: 15px;
 }
