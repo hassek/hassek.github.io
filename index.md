@@ -36,6 +36,7 @@ title: Home
         {% endfor %}
         <span style="float: right;">{{ post.date | date: "%Y-%m-%d" }}</span>
       </div>
+      {% include social-share.html %}
     </article>
   {% endfor %}
 </div>
