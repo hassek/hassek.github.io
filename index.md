@@ -29,6 +29,7 @@ title: Home
       <div class="entry">
         {{ post.content }}
       </div>
+      {% include social-share.html %}
       <div class="tags">
         <a class="tag topic-category" href="#0">{{ post.category }}</a>
         {% for tag in post.tags %}
@@ -36,7 +37,6 @@ title: Home
         {% endfor %}
         <span style="float: right;">{{ post.date | date: "%Y-%m-%d" }}</span>
       </div>
-      {% include social-share.html %}
     </article>
   {% endfor %}
 </div>

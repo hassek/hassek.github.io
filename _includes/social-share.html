@@ -1,5 +1,6 @@
+{% capture social_url %}{{ site.url }}/#{{ post.title | slugify  }}{% endcapture %}
 <div class="social-share">
-  <a href="https://twitter.com/intent/tweet?text=Remember - code snippets. '{{ post.title }}'&hashtags={{ post.category }},{{ post.tags | join:"," }}&url={{ post.url }}&via={{ site.twitter_username }}&related={{ site.twitter_username }}" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a>
-  <a href="https://facebook.com/sharer.php?u={{ site.url }}/#{{ post.title | slugify  }}" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a>
-  <a href="https://plus.google.com/share?url={{ site.url }}/#{{ post.title | slugify  }}" rel="nofollow" target="_blank" title="Share on Google+">Google+</a>
+  <a data-size="large" class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Remember - code snippets --> {{ post.title }}&hashtags={{ post.category }},{{ post.tags[0] }}&url={{ social_url | cgi_escape }}&via={{ site.twitter_username }}&related={{ site.twitter_username }}" rel="nofollow" target="_blank" title="Share on Twitter"></a>
 </div>
+{% comment %}<a href="https://facebook.com/sharer.php?u={{ social_url | escape }}" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a> {% endcomment %}
+{% comment %}<a href="https://plus.google.com/share?url={{ social_url | escape }}" rel="nofollow" target="_blank" title="Share on Google+">Google+</a> {% endcomment %}

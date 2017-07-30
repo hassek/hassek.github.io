@@ -41,5 +41,5 @@ Let's break the second one up:
 
 * `git branch -r --merged` will list all the merged branches on the git server
 * `grep -v "master"` will remove the master branch from the list, pretty sure we don't want to delete that one.
-* `sed -e "s/origin\///"` will remove the "origin/" string from the branches so we can delete them.
+* `sed -e "s/origin\///"` will remove the `origin/` string from the branches so we can delete them.
 * `xargs -I{} git push origin:{}` will delete them on *Github*, if you need to use any other command for your git server, change it here.
