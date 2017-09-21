@@ -6,6 +6,7 @@ category: git
 tags: [diff,fugitive]
 ---
 ```
-:Gdiff <branch>:%
+:Gdiff <branch>:% -- folder/
 ```
 `%` expands to the file name on vim.
+`-- folder/` will show only the changes inside that folder
