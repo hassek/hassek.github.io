@@ -32,9 +32,9 @@ origin/that-guy-that-never-deletes-the-branch
 Since we know which branches are already merged, we can prune them up easily. For this I created two script to automatically do this:
 
 ```shell
-git branch --merged | grep -v "master" | xargs -I{} git branch -d {}
+git branch --merged | grep -v "master" | parallel -I{} git branch -d {}
 git branch -r --merged | grep -v "master" | sed -e "s/origin\\///" \
-    | xargs -I{} git push origin :{}
+    | parallel -I{} git push origin :{}
 ```
 
 Let's break the second one up:
