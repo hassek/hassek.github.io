@@ -25,6 +25,10 @@ for i in $(seq 4); do sudo rabbitmqadmin declare binding -V rabbit source=<excha
 
 This is required to be able to connection between nodes. It needs to be setup at `/var/lib/rabbitmq/.erlang.cookie` and to all users that may want to use the cli.
 
+### Load balancer behind cluster
+
+To be able to handle traffic to each node, a load balancer is necessary behind the cluster. A HA proxy or an aws ELB is more than enough for the task.
+
 ### Scalable queue Mirroring
 
 If we mirror on all queues, we are not scaling quite well, to scale it up I setup impair nodes (3, 5, 7...) and add mirroring to 2 nodes, this way we can actually scale the system without touching all nodes for mirror queues.
@@ -43,3 +47,8 @@ rabbitmqctl set_policy --apply-to queues --priority 100 my-queue '^my-queue$' '{
 # wait for queues to migrate
 rabbitmqctl clear_policy my-queue
 ```
+
+### Node discovery
+
+Each node needs to be able to contact other nodes, this may sound obvious but some work is needed. There are plugins to handle it like the [AWS plugin](https://www.rabbitmq.com/cluster-formation.html#peer-discovery-aws) but I like
+best the DNS discovery option. By using the `RABBITMQ_USE_LONGNAME=true` at the `rabbitmq-env.conf` file so all nodes will be called `rabbit@<fullhostname>` and if the hostname resolves it will detect the other nodes without issues.
