@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: Postgres 9.4 systemd os tunning
 date: 2017-08-31 12:00:00
 category: postgres

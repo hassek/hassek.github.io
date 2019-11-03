@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: Python count calls without mocking
 date: 2019-05-08 19:22 +0200
 ---

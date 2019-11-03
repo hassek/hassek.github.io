@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: Adding nice fonts to vim on terminal
 date: 2018-05-24 19:42 +0200
 category: vim

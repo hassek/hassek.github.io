@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: git merges - ours or theirs
 date: 2018-09-06 19:19 +0200
 category: git

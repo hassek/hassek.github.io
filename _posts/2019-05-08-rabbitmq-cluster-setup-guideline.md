@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: Rabbitmq cluster setup guideline
 date: 2019-05-08 12:40 +0200
 category: rabbitmq

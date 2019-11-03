@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: execute parallel commands in the shell
 date: 2018-07-19 10:52 +0200
 category: shell
