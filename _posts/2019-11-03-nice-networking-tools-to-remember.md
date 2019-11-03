@@ -2,11 +2,25 @@
 layout: default
 title: nice networking tools to remember
 date: 2019-11-03 12:48 +0100
+category: shell
+tags: [linux,networking]
 ---
 
-`nslookup` is a tool to check the IPs a given dns entry resolves too, this is quite handy when you are modifying the dns and want to check if it updated, together with `watch` is quite nice:
+`nslookup` is a tool to resolve the IPs of a given dns entry, this is quite handy when you are modifying the dns and want to check if it updated, together with `watch` is quite nice.
 
-`traceroute` traces and measures hops on the internet, for example, here is a traceroute for www.google.com from spain, which clearly uses google/telefonica to reach
+```
+watch -n2 "nslookup mysite.example.com"
+```
+
+
+`telnet` the classic way to check if you are able to reach a service on a specific port. For example, to check if you can reach a redis machine.
+
+```
+telnet redis.example.com 6379
+```
+
+
+`traceroute` traces and measures hops on the internet, for example, here is a traceroute for _www.google.com_ from spain, which clearly hops over google/telefonica routers to reach the destination.
 
 ```
 traceroute to www.google.com (216.58.201.132), 64 hops max, 52 byte packets
