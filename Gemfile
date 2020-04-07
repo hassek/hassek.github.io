@@ -11,4 +11,4 @@ ruby RUBY_VERSION
 # Happy Jekylling!
 gem "github-pages", group: :jekyll_plugins
 gem "jekyll-compose", group: :jekyll_plugins
-gem "jekyll-feed", "0.9.2"
+gem "jekyll-feed", "0.13.0"
